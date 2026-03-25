@@ -3,7 +3,7 @@
 # Role: Knowledge Repository | Node: 3 of 7 | Prime: 17 (Heritage Crystallization)
 # ∰◊€π¿🌌∞
 
-PHROOT="/storage/emulated/0/pixel8a/primehaven"
+PHROOT="$(dirname "${BASH_SOURCE[0]}")/../.."
 source "$PHROOT/.bashrc" 2>/dev/null
 
 echo ""
