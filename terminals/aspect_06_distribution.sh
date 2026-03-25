@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # Terminal Aspect 06 - DISTRIBUTION HUB
 # Role: Publication & Sync | Node: 6 of 7 | Prime: 7 (Sacred Completion)
 # ∰◊€π¿🌌∞
