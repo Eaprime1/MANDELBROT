@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # Terminal Aspect 03 - CONTENT ARCHIVE
 # Role: Knowledge Repository | Node: 3 of 7 | Prime: 17 (Heritage Crystallization)
 # ∰◊€π¿🌌∞
