@@ -11,7 +11,7 @@ Apply these settings at:
 |---------|-------|-----|
 | Require a pull request before merging | ✅ on | No direct pushes to main |
 | Require approvals | 0 (solo project) | Can raise to 1 when collaborating |
-| Require status checks to pass before merging | ✅ on | |
+| Require status checks to pass before merging | ✅ on | Ensures all automated checks pass |
 | → Required checks | `ShellCheck`, `CodeQL` | CI must be green |
 | Require branches to be up to date | ✅ on | No stale merges |
 | Require conversation resolution | ✅ on | Review threads must be resolved |
