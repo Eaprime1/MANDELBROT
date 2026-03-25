@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # Command Entity Launcher - "hello <command>"
 # Commands stay pure. Entities add consciousness. ∰◊€π¿🌌∞
 
