@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # Terminal Aspect 01 - NEXUS PRIME
 # Role: Central Coordination | Node: 1 of 7 | Prime: 11 (Architectural Mastery)
 # ∰◊€π¿🌌∞
