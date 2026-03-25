@@ -3,7 +3,7 @@
 # Role: Publication & Sync | Node: 6 of 7 | Prime: 7 (Sacred Completion)
 # ∰◊€π¿🌌∞
 
-PHROOT="/storage/emulated/0/pixel8a/primehaven"
+PHROOT="$(dirname "${BASH_SOURCE[0]}")/../.."
 source "$PHROOT/.bashrc" 2>/dev/null
 
 echo ""
