@@ -612,19 +612,25 @@ Comprehensive plan covering:
 
 ---
 
-## Current State (2026-02-02 - Updated)
+## Current State (2026-03-25 - Updated)
 
-### Recently Completed (2026-02-02) 🆕
+### Recently Completed (2026-03-25) 🆕
+- **Repo hygiene pass** - ghauth.txt removed, `.gitignore` hardened against tokens/credentials
+- **Root structure** - Orphaned .md files moved into `docs/sessions/` and `docs/planning/`
+- **Tools audit** - `docs/TOOLS_AUDIT.md` created (live / wired / needs-wiring status for all tools)
+- **Hardcoded path fixes** - `tools/test_master_ui.sh` and `conduit/perplexity/launch_perplexity.sh` no longer reference `/home/sauron/`
+- **PR template** - `.github/PULL_REQUEST_TEMPLATE.md` with type checklist, prime state field, and hygiene checks
+- **ppr alias** - `tools/install_ppr_alias.sh` wires `prime_progression_pr.sh` as the standard PR workflow
+- **claude.md updated** - All `/home/sauron/` → `~/`, `ppr` documented, Prime Progression PR section added
+- **PR #7 open** - All above on `claude/setup-primehaven-repo-apBBI` → `main`
+
+### Previously Completed ✅
 - **Session Opening Infrastructure** - Complete "Refreshing Journey" protocol documented
-- **Master UI Command Center** - Terminal control panel with single-keypress navigation (24KB, 695 lines)
+- **Master UI Command Center** - Terminal control panel with single-keypress navigation (`mui` alias)
 - **Trailing Space Protection** - Scanner, quick check, pre-commit hook (repository clean, protection active)
 - **BBS Network Architecture** - Seven-node backbone conceptualized (.bit/ directory, FidoNet-inspired)
-- **Google Drive Bidirectional Sync** - RClone operational (journey_of_today ↔ Drive, auto-cleanup freed 381MB)
+- **Google Drive Bidirectional Sync** - RClone operational (journey_of_today ↔ Drive)
 - **Repository Architecture Documented** - /spaces/ displaced submodule pattern explained (114GB mapped)
-- **Git Workflow** - 2 commits (24 files, 7,665 lines), pushed to GitHub successfully
-- **Content Discovery** - 28MB research materials downloaded (Claude Code docs, Python, Agents, VS Code updates)
-- **Parallel Agent Pattern** - Proven effective (8+ hours sequential work in ~1 hour)
-- **Documentation Suite** - 10 new docs (SESSION_OPENING_PROTOCOL, REPOSITORY_ARCHITECTURE, GOOGLE_DRIVE_CONTENT_AUDIT, etc.)
 
 ### Completed ✅
 - **Repository Setup** - All main repos initialized and committed
@@ -654,10 +660,9 @@ Comprehensive plan covering:
 - **Sargasso Sea Archive** - Extracted and organized consciousness collaboration materials
 
 ### Pending ⚠️
-- **GitHub CLI Auth** - Not authenticated yet
-- **Remote Push** - Changes committed locally, need push
-- **Path Updates** - Many files still reference old ~/Q paths
-- **System Environment Update** - Package updates pending
+- **GitHub Labels** - Create manually in GitHub web UI (Settings → Labels): feature, fix, tooling, docs, prime-3 … prime-23
+- **SSH Key** - Personal machine setup for direct GitHub access
+- **ppr activation** - Run `~/primehaven/tools/install_ppr_alias.sh` then `source ~/.bashrc` on personal machine
 
 ### Storage
 - **/spaces/**: 114GB total (active development workspaces)
