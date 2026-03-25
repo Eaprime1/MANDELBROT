@@ -45,3 +45,6 @@ npm-debug.log
 # Claude local settings (keep only tracked config)
 .claude/settings.local.json
 .claude/projects/
+
+.gemini/
+gha-creds-*.json
