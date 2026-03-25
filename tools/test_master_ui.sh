@@ -4,7 +4,7 @@
 echo "Testing Master UI components..."
 echo ""
 
-MASTER_UI="/home/sauron/primehaven/tools/master_ui.sh"
+MASTER_UI="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/master_ui.sh"
 
 # Test 1: Script is executable
 if [[ -x "$MASTER_UI" ]]; then
