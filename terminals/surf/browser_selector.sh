@@ -18,9 +18,14 @@ select_browser() {
     esac
 
     # Smart selection based on URL pattern
+    # Note: browsh requires Firefox headless - use --browsh flag when needed
     case "$url" in
-        *github.com*|*oauth*|*login*|*auth*)
+        *oauth*|*login*|*auth*)
+            # JS-heavy auth flows - browsh if available, but may fail in TTY
             echo "browsh" ;;
+        *github.com*)
+            # GitHub works well in w3m for reading code/repos
+            echo "w3m" ;;
         */docs/*|*docs.*|*.readthedocs.io*|*readthedocs*)
             echo "lynx" ;;
         *stackoverflow.com*)

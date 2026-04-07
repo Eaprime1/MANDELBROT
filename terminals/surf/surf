@@ -23,9 +23,13 @@ HISTORY_FILE="${HOME}/.surf_history"
 declare -A BOOKMARKS=(
     ["ddg"]="https://duckduckgo.com"
     ["gh"]="https://github.com"
+    ["github"]="https://github.com"
     ["so"]="https://stackoverflow.com"
+    ["stackoverflow"]="https://stackoverflow.com"
     ["hn"]="https://news.ycombinator.com"
+    ["hackernews"]="https://news.ycombinator.com"
     ["wiki"]="https://en.wikipedia.org"
+    ["wikipedia"]="https://en.wikipedia.org"
     ["arch"]="https://wiki.archlinux.org"
     ["man"]="https://man.archlinux.org"
 )
@@ -68,6 +72,27 @@ search_ddg() {
 save_history() {
     local url="$1"
     echo "$(date '+%Y-%m-%d %H:%M') $url" >> "$HISTORY_FILE"
+}
+
+# normalize_url - ensure URL has protocol, expand common domains
+# TODO: User contribution point - implement normalization logic
+normalize_url() {
+    local url="$1"
+
+    # Already has protocol? Return as-is
+    if [[ "$url" =~ ^(https?|file|ftp):// ]]; then
+        echo "$url"
+        return 0
+    fi
+
+    # Contains a dot? Likely a domain - add https://
+    if [[ "$url" == *"."* ]]; then
+        echo "https://$url"
+        return 0
+    fi
+
+    # Bare word without dot - return as-is (let bookmark lookup handle it)
+    echo "$url"
 }
 
 interactive_menu() {
@@ -137,6 +162,9 @@ launch_browser() {
     if [[ -n "${BOOKMARKS[$url]:-}" ]]; then
         url="${BOOKMARKS[$url]}"
     fi
+
+    # Normalize URL (add protocol if missing)
+    url=$(normalize_url "$url")
 
     # Get smart browser selection
     local browser=$(select_browser "$url" "$force")
