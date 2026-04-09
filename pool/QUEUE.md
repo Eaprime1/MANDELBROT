@@ -10,7 +10,7 @@
 
 ```
 [ACTIVE] Violation Framework
-  Source:      .mandelbrot/VIOLATION_FRAMEWORK.md (draft — lives here in pool during dev)
+  Source:      .mandelbrot/VIOLATION_FRAMEWORK.md (draft — tracked in pool during dev)
   Added:       2026-04-08
   Description: Navigation-aware framework for the Pinnacle antagonist.
                Absolutely unambiguous about harm. Non-linear entry points.
