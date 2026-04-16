@@ -67,7 +67,7 @@ tools/master_ui.sh:~200       # Add "W) Web Navigator" menu option
 - [ ] **Step 1: Create surf directory structure**
 
 ```bash
-cd /home/sauron/primehaven
+cd "$HOME/primehaven"
 mkdir -p terminals/surf/config
 mkdir -p terminals/entities/surf-simple
 mkdir -p terminals/entities/surf-unified
