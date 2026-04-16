@@ -62,7 +62,7 @@ jobs:
         uses: 'google-github-actions/run-gemini-cli@v0' # ratchet:exclude
         env:
           GITHUB_TOKEN: '' # Do NOT pass any auth tokens here since this runs on untrusted inputs
-          ISSUE_TITLE: "${{ github.event.issue.title || github.event.pull_request.title || 'Untitled' }}"
+          ISSUE_TITLE: "${{ github.event.issue.title || github.event.pull_request.title || 'No title provided' }}"
           ISSUE_BODY: '${{ github.event.issue.body || github.event.pull_request.body || '' }}'
           AVAILABLE_LABELS: '${{ steps.get_labels.outputs.available_labels }}'
         with:
