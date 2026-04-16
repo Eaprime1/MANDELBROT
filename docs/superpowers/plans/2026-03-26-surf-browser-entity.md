@@ -808,13 +808,13 @@ browse_url() {
     echo ""
 
     # Launch browser
+    # Launch browser
+    local exit_code=0
     case "$browser" in
-        lynx) lynx -accept_all_cookies "$url" ;;
-        w3m) w3m "$url" ;;
-        browsh) browsh --startup-url "$url" ;;
+        lynx) lynx -accept_all_cookies "$url" || exit_code=$? ;;
+        w3m) w3m "$url" || exit_code=$? ;;
+        browsh) browsh --startup-url "$url" || exit_code=$? ;;
     esac
-
-    local exit_code=$?
 
     # Log visit
     if [[ $exit_code -eq 0 ]]; then
