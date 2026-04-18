@@ -24,4 +24,4 @@ jobs:
           # SC1091: not following sourced file — files may not exist in CI
           ignore_codes: SC2034,SC1091
           scandir: "."
-          severity: warning
+          severity: error
