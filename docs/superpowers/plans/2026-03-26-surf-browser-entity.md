@@ -610,10 +610,6 @@ import_session() {
     else
         echo "✗ Import failed"
     fi
-        echo "✓ Session imported successfully"
-    else
-        echo "✗ Import failed"
-    fi
 }
 
 # pause helper
@@ -807,7 +803,6 @@ browse_url() {
     echo "${GREEN}→${NORMAL} Browser: $browser"
     echo ""
 
-    # Launch browser
     # Launch browser
     local exit_code=0
     case "$browser" in

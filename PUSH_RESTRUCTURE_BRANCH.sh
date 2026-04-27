@@ -28,7 +28,7 @@ fi
 echo "SSH push failed, trying HTTPS..."
 
 # If SSH fails, push directly to HTTPS URL without rewriting origin.
-git push -u https://github.com/Eaprime1/primehaven.git restructure
+git push https://github.com/Eaprime1/primehaven.git restructure
 
 echo "✓ Branch pushed!"
 echo ""
