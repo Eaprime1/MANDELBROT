@@ -43,6 +43,6 @@ jobs:
 
       - name: Check Spelling
         run: |
-          apt-get update && apt-get install -y spell
+          sudo apt-get update && sudo apt-get install -y spell
           find . -name "*.sh" -exec spell {} +
           
