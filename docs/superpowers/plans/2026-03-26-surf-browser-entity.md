@@ -610,7 +610,6 @@ import_session() {
     else
         echo "✗ Import failed"
     fi
-    fi
 }
 
 # pause helper
